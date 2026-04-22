@@ -125,6 +125,28 @@
     <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
-<p class="text-gray-400">WhatsApp: +86 156 2627 4496</p>
+<!-- 鼠标跟随文字容器 -->
+<div id="cursor-whatsapp" class="fixed pointer-events-none z-[9999] text-pink-600 font-bold text-sm bg-white/80 px-2 py-1 rounded shadow-sm transition-opacity duration-300 opacity-0">
+    WA: +8615626274496
+</div>
+    <script>
+    const cursorText = document.getElementById('cursor-whatsapp');
+
+    document.addEventListener('mousemove', (e) => {
+        // 更新位置（鼠标坐标 + 偏移量）
+        cursorText.style.left = (e.clientX + 15) + 'px';
+        cursorText.style.top = (e.clientY + 15) + 'px';
+        
+        // 第一次移动时显示
+        if (cursorText.style.opacity === '0') {
+            cursorText.style.opacity = '1';
+        }
+    });
+
+    // 鼠标离开窗口时隐藏
+    document.addEventListener('mouseleave', () => {
+        cursorText.style.opacity = '0';
+    });
+</script>
 </body>
 </html>
