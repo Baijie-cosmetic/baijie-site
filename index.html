@@ -3,179 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baijie Cosmetic | Professional Beauty & Tanning Manufacturer</title>
+    <title>Baijie Cosmetic | Professional Personal Care</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
-        .accent-color { color: #d4a373; }
-        .accent-bg { background-color: #d4a373; }
-        .accent-border { border-color: #d4a373; }
-        .product-card { background-color: #ffffff; border: 1px solid #e5e7eb; transition: none; }
-        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        #cursor-whatsapp { position: fixed; pointer-events: none; z-index: 9999; transition: opacity 0.3s; }
+        .gradient-text { background: linear-gradient(to right, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #cursor-whatsapp { transition: opacity 0.3s; }
     </style>
 </head>
-<body class="leading-normal tracking-normal">
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
-    <!-- Header -->
-    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 fixed w-full z-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
                 <img src="assets/logo.png" alt="Baijie Cosmetic" class="h-10">
-                <span class="ml-3 font-bold text-xl tracking-tight text-gray-900">BAIJIE <span class="accent-color">COSMETIC</span></span>
+                <span class="ml-3 font-bold text-xl text-gray-800">Baijie Cosmetic</span>
             </div>
-            <div class="hidden md:flex space-x-10 items-center text-xs font-bold tracking-widest uppercase text-gray-600">
-                <a href="#home" class="hover:text-gray-900 transition">Home</a>
-                <a href="#products" class="hover:text-gray-900 transition">Products</a>
-                <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="accent-bg text-white px-6 py-2 rounded shadow-sm hover:opacity-90 transition">Inquiry Now</a>
+            <div class="hidden md:flex space-x-8 items-center text-gray-600 font-medium">
+                <a href="#home" class="hover:text-pink-500">Home</a>
+                <a href="#products" class="hover:text-pink-500">Products</a>
+                <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center pt-20 bg-[#faf9f6]">
+    <section id="home" class="pt-32 pb-20 bg-white border-b">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <span class="text-xs font-bold tracking-[0.3em] accent-color uppercase mb-4 block">Certified Manufacturer</span>
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 text-gray-900">
-                    High-End <span class="accent-color italic">Beauty</span> Solutions
-                </h1>
-                <p class="text-gray-600 text-lg md:text-xl mb-10 max-w-lg border-l-2 accent-border pl-6">
-                    Specializing in premium tanning accelerators and professional skincare formulas. We provide full OEM/ODM services for global brands.
-                </p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#products" class="bg-gray-900 text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-gray-800 transition text-center shadow-lg">Our Products</a>
-                    <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="border-2 border-gray-900 text-gray-900 px-10 py-4 font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition text-center">Contact Us</a>
+            <div class="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Premium <span class="gradient-text">Beauty & Tanning</span></h1>
+                <p class="text-gray-600 text-xl mb-10">High-quality skincare, tanning accelerators, and herbal soaps directly from Baijie Beauty manufacturer.</p>
+                <div class="flex flex-col sm:space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-800 text-center">Shop Best Sellers</a>
+                    <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="border border-gray-300 px-8 py-3 rounded-lg font-bold hover:bg-gray-50 text-center">WhatsApp Catalog</a>
                 </div>
             </div>
-            <div class="md:w-1/2 relative">
-                <div class="absolute -top-10 -right-10 w-64 h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-                <img src="https://s.alicdn.com/@sc04/kf/Hc887d6ae1f194dc28a1f5756108cc09bb/Private-Label-Sunbed-Tanning-Lotion-Intensive-Tanning.jpg" alt="Hero Image" class="rounded-2xl shadow-2xl relative z-10 w-full max-w-lg mx-auto">
+            <div class="md:w-1/2">
+                <img src="https://s.alicdn.com/@sc04/kf/Hc887d6ae1f194dc28a1f5756108cc09bb/Private-Label-Sunbed-Tanning-Lotion-Intensive-Tanning.jpg" alt="Tanning Collection" class="rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
             </div>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <div class="bg-white py-12 border-b border-gray-100">
-        <div class="container mx-auto px-6 flex flex-wrap justify-around items-center opacity-60 grayscale hover:grayscale-0 transition duration-500">
-            <span class="font-bold text-gray-400 tracking-tighter text-2xl">ISO CERTIFIED</span>
-            <span class="font-bold text-gray-400 tracking-tighter text-2xl">GMP QUALITY</span>
-            <span class="font-bold text-gray-400 tracking-tighter text-2xl">GLOBAL SHIPPING</span>
-            <span class="font-bold text-gray-400 tracking-tighter text-2xl">OEM/ODM READY</span>
-        </div>
-    </div>
-
-    <!-- Products Collection -->
-    <section id="products" class="py-24 bg-white">
+    <!-- Featured Products -->
+    <section id="products" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl font-bold text-gray-900 uppercase mb-4">Product <span class="accent-color italic">Showcase</span></h2>
-                <div class="w-20 h-1 accent-bg mx-auto"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Product Card 1 -->
-                <div class="product-card rounded-lg overflow-hidden flex flex-col">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="https://s.alicdn.com/@sc04/kf/H82902ebe1e0a4bceb1782a0873a48979v/Skin-Care-Tea-Tree-Essential-Oil-Soap.jpg_200x200.jpg" alt="Tea Tree Soap" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded shadow-sm">🌿 Natural</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-2">Tea Tree Essential Oil Soap Bar</h3>
-                        <div class="flex items-center space-x-4 mb-6 text-gray-500">
-                            <div class="flex-1"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">MOQ</p><p class="text-xs font-semibold">1000 Units</p></div>
-                            <div class="flex-1 border-l pl-4"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">Lead Time</p><p class="text-xs font-semibold">15 Days</p></div>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-gray-50">
-                            <span class="text-xl font-bold accent-color">$1.30</span>
-                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Tea%20Tree%20Soap" target="_blank" class="bg-gray-50 text-gray-900 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition">Get Quote</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="product-card rounded-lg overflow-hidden flex flex-col">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="https://s.alicdn.com/@sc04/kf/Aa28af1a15eb44da0892e4546d41e10c5N/Wholesale-Custom-Logo-100ml-Intensive-Extreme-Clear.jpg_200x200.jpg" alt="Tanning Gel" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded shadow-sm text-amber-600">⭐ Best Seller</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-2">Intensive Extreme Self Tanning Gel</h3>
-                        <div class="flex items-center space-x-4 mb-6 text-gray-500">
-                            <div class="flex-1"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">MOQ</p><p class="text-xs font-semibold">500 Units</p></div>
-                            <div class="flex-1 border-l pl-4"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">Lead Time</p><p class="text-xs font-semibold">10 Days</p></div>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-gray-50">
-                            <span class="text-xl font-bold accent-color">$2.80</span>
-                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Tanning%20Gel" target="_blank" class="bg-gray-50 text-gray-900 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition">Get Quote</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="product-card rounded-lg overflow-hidden flex flex-col">
-                    <div class="h-80 overflow-hidden relative">
-                        <img src="https://s.alicdn.com/@sc04/kf/H36325e0003404d3695d5652f3862a9597/Private-Label-Skin-Care-Cosmetics-GHK-CU.jpg" alt="Copper Serum" class="w-full h-full object-cover">
-                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded shadow-sm text-blue-600">🔬 Advanced</div>
-                    </div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-2">GHK-CU Copper Peptide Face Serum</h3>
-                        <div class="flex items-center space-x-4 mb-6 text-gray-500">
-                            <div class="flex-1"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">MOQ</p><p class="text-xs font-semibold">300 Units</p></div>
-                            <div class="flex-1 border-l pl-4"><p class="text-[10px] uppercase font-bold text-gray-400 mb-1">Lead Time</p><p class="text-xs font-semibold">20 Days</p></div>
-                        </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-gray-50">
-                            <span class="text-xl font-bold accent-color">$3.60</span>
-                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Copper%20Serum" target="_blank" class="bg-gray-50 text-gray-900 px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-gray-900 hover:text-white transition">Get Quote</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Top Picks from Baijie Beauty</h2>
+                <p class="text-gray-600">Explore our featured collection of skincare and tanning products.</p>
             </div>
             
-            <div class="mt-20 text-center">
-                <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="text-xs font-bold uppercase tracking-[0.5em] text-gray-400 hover:accent-color transition">Download Full Product Catalog</a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/H82902ebe1e0a4bceb1782a0873a48979v/Skin-Care-Tea-Tree-Essential-Oil-Soap.jpg_200x200.jpg" alt="Tea Tree Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Tea Tree Essential Oil Soap Bar</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$1.30</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Tea%20Tree%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Hdc341e5bf4fa4cc9a17d2325035e713eL/Custom-Exfoliating-Turmeric-and-Vitamin-C-Herbal.jpg_200x200.jpg" alt="Turmeric Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Exfoliating Turmeric & Vitamin C Soap</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$0.69 - $0.98</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Turmeric%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Aa28af1a15eb44da0892e4546d41e10c5N/Wholesale-Custom-Logo-100ml-Intensive-Extreme-Clear.jpg_200x200.jpg" alt="Self Tanning Gel" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">100ml Intensive Extreme Self Tanning Gel</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$2.80 - $3.00</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20100ml%20Tanning%20Gel" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Hfc6bdb51a0a648f18bc135d19f75fa29W/Handmade-Natural-100g-2-in-1-Orange.jpg_200x200.jpg" alt="Orange Loofah Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Natural 100g 2-in-1 Orange Loofah Soap</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$1.20</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Orange%20Loofah%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Hc887d6ae1f194dc28a1f5756108cc09bb/Private-Label-Sunbed-Tanning-Lotion-Intensive-Tanning.jpg" alt="Tanning Accelerator" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Sunbed Intensive Tanning Accelerator Cream</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$2.80 - $3.80</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Tanning%20Accelerator" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/H7bbff41203fc41bdb008c777b93cfa69C/Private-Label-Extreme-Intensive-Oral-Tan-Drops.jpg_480x480.jpg" alt="Oral Tan Drops" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Extreme Intensive Bubblegum Tanning Drops</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$2.34 - $3.51</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Tanning%20Drops" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Hecfa81857f574d23ac63dd9ef1baccf0E/Custom-Logo-Natural-Women-s-Daily-Hair.jpg_480x480.jpg" alt="Hair Wax Stick" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Women's Daily Hair Wax Extreme Hold Stick</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$1.35 - $1.90</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Hair%20Wax%20Stick" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/Ha241d41f6465445c96d9b688e731f5ddO/Handmade-Honey-Tea-Tree-Lavender-Whitening-Bath.jpg" alt="Honey Glow Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Honey Tea Tree Lavender Whitening Soap</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$0.69 - $0.88</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Honey%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/He95415a3b1844d7cbc82a265f6e3eecbK/Wholesale-Whitening-Lightening-Papaya-and-Kojic-Acid.jpg_480x480.jpg" alt="Papaya Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Whitening Papaya & Kojic Acid Soap</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$0.81 - $0.93</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Papaya%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 10 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/H1b5b6379a2794a2d8e79df28bb1855036/No-Logo-100g-Handmade-Organic-Loofah-Soap.jpg" alt="Organic Loofah Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">100g Handmade Organic Loofah Soap</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$0.68 - $0.85</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Organic%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 11 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/H1d1ec151c3744bf68567b33c0b9291bak/200g-Sun-Bed-Instant-Intensive-Tanning-Lotion.jpg" alt="200g Tanning Lotion" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">200g Instant Intensive Tanning Lotion</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$4.00 - $4.80</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20200g%20Tanning%20Lotion" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 12 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition flex flex-col border border-gray-100">
+                    <div class="h-64 overflow-hidden"><img src="https://s.alicdn.com/@sc04/kf/He2a1e028aa1d4ca0b9346ba6513d35aag/Wholesale-Bulk-Handmade-Herbal-Pink-Yoni-Soap.jpg_480x480.jpg" alt="Pink Yoni Soap" class="w-full h-full object-cover"></div>
+                    <div class="p-5 flex-grow">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2">Handmade Herbal Pink Yoni Soap Bar</h3>
+                        <div class="flex justify-between items-center mt-4">
+                            <span class="text-lg font-bold text-pink-500">$1.20</span>
+                            <a href="https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%3A%20Yoni%20Soap" target="_blank" class="bg-gray-100 px-4 py-2 rounded text-sm font-bold hover:bg-pink-500 hover:text-white transition">Inquiry</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-20">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
-                <div>
-                    <h3 class="text-xl font-bold mb-6 tracking-tight uppercase">Baijie <span class="accent-color">Cosmetic</span></h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">A leading professional manufacturer dedicated to high-performance beauty and tanning formulas since 2016.</p>
+    <footer id="about" class="bg-black text-white py-12">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-4">Baijie Cosmetic</h2>
+                    <p class="text-gray-400">Professional Manufacturer of Skincare & Tanning Solutions.</p>
                 </div>
-                <div>
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-6">Quick Links</h4>
-                    <ul class="text-sm space-y-4 font-semibold">
-                        <li><a href="#" class="hover:accent-color transition">OEM/ODM Service</a></li>
-                        <li><a href="#" class="hover:accent-color transition">Formula Design</a></li>
-                        <li><a href="#" class="hover:accent-color transition">Production Capacity</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-6">Connect</h4>
-                    <p class="text-sm mb-2">WhatsApp: +86 156 2627 4496</p>
-                    <p class="text-sm">Email: sales@baijiecosmetic.com</p>
+                <div class="flex space-x-6 text-2xl">
+                    <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://baijiebeauty.en.alibaba.com/" target="_blank" class="hover:text-orange-500 transition"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-10 text-center">
-                <p class="text-[10px] uppercase tracking-widest text-gray-500">&copy; 2026 Baijie Cosmetic Co., Ltd. All rights reserved.</p>
+            <div class="border-t border-gray-800 mt-10 pt-10 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Baijie Cosmetic. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://api.whatsapp.com/send?phone=8615626274496" target="_blank" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-
     <!-- Mouse Cursor Number -->
-    <div id="cursor-whatsapp" class="text-pink-600 font-bold text-sm bg-white/80 px-2 py-1 rounded shadow-sm opacity-0">
+    <div id="cursor-whatsapp" class="fixed pointer-events-none z-[9999] text-pink-600 font-bold text-sm bg-white/80 px-2 py-1 rounded shadow-sm opacity-0">
         WA: +8615626274496
     </div>
 
