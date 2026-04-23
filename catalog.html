@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog | Baijie Cosmetic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-gray-600 hover:text-pink-500 transition">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Home
+            </a>
+            <h1 class="font-bold text-xl uppercase tracking-widest text-gray-900">Product <span class="text-pink-500">Catalog</span></h1>
+            <a href="assets/catalog/catalog.pdf" download class="bg-black text-white px-4 py-2 rounded text-xs font-bold uppercase tracking-widest hover:bg-pink-500 transition">
+                <i class="fas fa-download mr-2"></i> Download PDF
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+            <!-- PDF Embedding -->
+            <iframe src="assets/catalog/catalog.pdf" class="w-full h-[800px]" frameborder="0">
+                <p>Your browser does not support iframes. <a href="assets/catalog/catalog.pdf">Click here to download the PDF file.</a></p>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 text-center mt-20">
+        <p class="text-[10px] uppercase tracking-widest text-gray-600">&copy; 2026 Baijie Cosmetic. All rights reserved.</p>
+    </footer>
+</body>
+</html>
