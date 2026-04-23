@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Baijie Cosmetic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <nav class="p-6 border-b sticky top-0 bg-white z-50">
+        <div class="container mx-auto">
+            <a href="index.html" class="font-bold text-gray-600 hover:text-pink-500 transition">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Collection
+            </a>
+        </div>
+    </nav>
+    
+    <div class="container mx-auto px-6 py-12">
+        <div id="product-container" class="flex flex-col md:flex-row gap-12 opacity-0 transition-opacity duration-500">
+            <!-- Left: Image -->
+            <div class="md:w-1/2">
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-inner">
+                    <img id="p-img" src="" class="w-full h-auto object-cover transform hover:scale-105 transition duration-700">
+                </div>
+            </div>
+            <!-- Right: Content -->
+            <div class="md:w-1/2">
+                <div class="mb-2">
+                    <span id="p-category" class="text-xs font-bold tracking-widest uppercase text-pink-500">Premium Collection</span>
+                </div>
+                <h1 id="p-title" class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight"></h1>
+                <p id="p-price" class="text-2xl text-pink-500 font-bold mb-8"></p>
+                
+                <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                    <h3 class="font-bold text-gray-800 mb-4 uppercase tracking-wider text-sm">Specifications:</h3>
+                    <ul id="p-specs" class="text-gray-600 space-y-3"></ul>
+                </div>
+
+                <div class="space-y-4">
+                    <a id="p-wa" href="" target="_blank" class="block w-full bg-[#25D366] text-white text-center py-4 rounded-xl font-bold text-lg hover:bg-[#128C7E] shadow-lg transition transform hover:-translate-y-1">
+                        <i class="fab fa-whatsapp mr-2"></i> Inquiry via WhatsApp
+                    </a>
+                    <p class="text-center text-xs text-gray-400 uppercase tracking-widest font-bold">Safe & Direct Manufacturing Inquiry</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fallback if product not found -->
+        <div id="not-found" class="hidden text-center py-20">
+            <h2 class="text-2xl font-bold mb-4">Product Not Found</h2>
+            <a href="index.html" class="text-pink-500 font-bold hover:underline">Return to Collection</a>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            "tea-tree-soap": {
+                title: "Tea Tree Essential Oil Soap Bar",
+                price: "$1.30",
+                img: "https://s.alicdn.com/@sc04/kf/H82902ebe1e0a4bceb1782a0873a48979v/Skin-Care-Tea-Tree-Essential-Oil-Soap.jpg_200x200.jpg",
+                specs: ["Skin Care Formula", "Moisturizing & Cleansing", "Handmade Quality", "Direct Factory Price"]
+            },
+            "turmeric-soap": {
+                title: "Exfoliating Turmeric & Vitamin C Soap",
+                price: "$0.69 - $0.98",
+                img: "https://s.alicdn.com/@sc04/kf/Hdc341e5bf4fa4cc9a17d2325035e713eL/Custom-Exfoliating-Turmeric-and-Vitamin-C-Herbal.jpg_200x200.jpg",
+                specs: ["Herbal Extraction", "Vitamin C Enriched", "Exfoliating Properties", "Bulk Order Available"]
+            },
+            "tanning-gel": {
+                title: "100ml Intensive Extreme Self Tanning Gel",
+                price: "$2.80 - $3.00",
+                img: "https://s.alicdn.com/@sc04/kf/Aa28af1a15eb44da0892e4546d41e10c5N/Wholesale-Custom-Logo-100ml-Intensive-Extreme-Clear.jpg_200x200.jpg",
+                specs: ["Intensive Formula", "Fast Absorption", "Long-lasting Tan", "100ml Travel Size"]
+            },
+            "orange-loofah-soap": {
+                title: "Natural 100g 2-in-1 Orange Loofah Soap",
+                price: "$1.20",
+                img: "https://s.alicdn.com/@sc04/kf/Hfc6bdb51a0a648f18bc135d19f75fa29W/Handmade-Natural-100g-2-in-1-Orange.jpg_200x200.jpg",
+                specs: ["Handmade Natural Soap", "Built-in Loofah", "Orange Essential Oil", "Exfoliating Texture"]
+            },
+            "tanning-accelerator": {
+                title: "Sunbed Intensive Tanning Accelerator Cream",
+                price: "$2.80 - $3.80",
+                img: "https://s.alicdn.com/@sc04/kf/Hc887d6ae1f194dc28a1f5756108cc09bb/Private-Label-Sunbed-Tanning-Lotion-Intensive-Tanning.jpg",
+                specs: ["Sunbed Optimized", "Fast Darkening", "Moisturizing Cream", "Professional Series"]
+            },
+            "tanning-drops": {
+                title: "Extreme Intensive Bubblegum Tanning Drops",
+                price: "$2.34 - $3.51",
+                img: "https://s.alicdn.com/@sc04/kf/H7bbff41203fc41bdb008c777b93cfa69C/Private-Label-Extreme-Intensive-Oral-Tan-Drops.jpg_480x480.jpg",
+                specs: ["Extreme Concentration", "Bubblegum Scent", "Multi-use Drops", "Custom Packaging Ready"]
+            },
+            "hair-wax-stick": {
+                title: "Women's Daily Hair Wax Extreme Hold Stick",
+                price: "$1.35 - $1.90",
+                img: "https://s.alicdn.com/@sc04/kf/Hecfa81857f574d23ac63dd9ef1baccf0E/Custom-Logo-Natural-Women-s-Daily-Hair.jpg_480x480.jpg",
+                specs: ["Extreme Hold", "No Greasy Residue", "Convenient Stick Form", "Daily Styling Essential"]
+            },
+            "honey-soap": {
+                title: "Honey Tea Tree Lavender Whitening Soap",
+                price: "$0.69 - $0.88",
+                img: "https://s.alicdn.com/@sc04/kf/Ha241d41f6465445c96d9b688e731f5ddO/Handmade-Honey-Tea-Tree-Lavender-Whitening-Bath.jpg",
+                specs: ["Honey & Lavender Extract", "Skin Brightening", "Gentle Cleansing", "OEM/ODM Available"]
+            },
+            "papaya-soap": {
+                title: "Whitening Papaya & Kojic Acid Soap",
+                price: "$0.81 - $0.93",
+                img: "https://s.alicdn.com/@sc04/kf/He95415a3b1844d7cbc82a265f6e3eecbK/Wholesale-Whitening-Lightening-Papaya-and-Kojic-Acid.jpg_480x480.jpg",
+                specs: ["Kojic Acid Power", "Natural Papaya Extract", "Even Skin Tone", "Best-selling Formula"]
+            },
+            "organic-loofah-soap": {
+                title: "100g Handmade Organic Loofah Soap",
+                price: "$0.68 - $0.85",
+                img: "https://s.alicdn.com/@sc04/kf/H1b5b6379a2794a2d8e79df28bb1855036/No-Logo-100g-Handmade-Organic-Loofah-Soap.jpg",
+                specs: ["100% Organic", "Biodegradable Loofah", "Handmade Process", "Eco-friendly Skincare"]
+            },
+            "tanning-lotion": {
+                title: "200g Instant Intensive Tanning Lotion",
+                price: "$4.00 - $4.80",
+                img: "https://s.alicdn.com/@sc04/kf/H1d1ec151c3744bf68567b33c0b9291bak/200g-Sun-Bed-Instant-Intensive-Tanning-Lotion.jpg",
+                specs: ["Large 200g Size", "Instant Bronzing", "Intensive Hydration", "Premium Packaging"]
+            },
+            "yoni-soap": {
+                title: "Handmade Herbal Pink Yoni Soap Bar",
+                price: "$1.20",
+                img: "https://s.alicdn.com/@sc04/kf/He2a1e028aa1d4ca0b9346ba6513d35aag/Wholesale-Bulk-Handmade-Herbal-Pink-Yoni-Soap.jpg_480x480.jpg",
+                specs: ["Herbal Infused", "PH Balanced", "Handmade Soap", "Feminine Care Formula"]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const p = products[id];
+
+        if (p) {
+            document.title = `${p.title} | Baijie Cosmetic`;
+            document.getElementById('p-title').innerText = p.title;
+            document.getElementById('p-price').innerText = p.price;
+            document.getElementById('p-img').src = p.img;
+            document.getElementById('p-wa').href = `https://api.whatsapp.com/send?phone=8615626274496&text=Inquiry%20for%3A%20${encodeURIComponent(p.title)}`;
+            
+            p.specs.forEach(s => {
+                const li = document.createElement('li');
+                li.className = "flex items-start";
+                li.innerHTML = `<i class="fas fa-check-circle text-pink-500 mt-1 mr-3 text-xs"></i><span>${s}</span>`;
+                document.getElementById('p-specs').appendChild(li);
+            });
+            document.getElementById('product-container').classList.remove('opacity-0');
+        } else {
+            document.getElementById('not-found').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
